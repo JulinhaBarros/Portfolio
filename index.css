@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #11c089;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.header_home {
+
+    margin-left: 3rem;
+}
+
+.header_menu a {
+
+    text-decoration: none;
+    margin-right: 3rem;
+    outline: none;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.header_menu a:hover,
+.header_menu a:hover::after {
+
+    content: "";
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+.home {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: 100vh;
+    padding-top: 3rem;
+    background-color: #22d19a;
+}
+
+.home_about {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home_about h1 {
+    font-size: 3rem;
+}
+
+.home_about p {
+    font-size: 1.5rem;
+}
+
+.home_image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_image img {
+    width: 80%;
+}
+
+.projetos {
+    height: 100%;
+    background-color: #22d19a;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.projetos_cards {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1rem;
+    padding: 0 3rem;
+    text-align: center;
+}
+
+.projetos_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projetos_title h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.projeto {
+    width: 100%;
+    background-color: #11c089;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+.projeto:hover {
+    transform: scale(1.01);
+}
+
+.projeto img {
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.referencias {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.referencias a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    background-color: #b677b1;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 1rem;
+}
+
+.referencias a:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    .home_about {
+        margin-left: 0;
+    }
+
+    .projeto {
+        width: 70%;
+    }
+}

@@ -9,7 +9,7 @@
     display: flex;
     width: 100%;
     height: 50px;
-    background-color: #11c089;
+    background-color: #90EE90.;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -45,7 +45,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     height: 100vh;
     padding-top: 3rem;
-    background-color: #22d19a;
+    background-color: #90EE90.;
 }
 
 .home_about {
@@ -78,7 +78,7 @@
 
 .projetos {
     height: 100%;
-    background-color: #22d19a;
+    background-color: #90EE90.;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }

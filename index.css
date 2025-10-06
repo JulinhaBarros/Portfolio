@@ -1,156 +1,234 @@
+/* RESET E BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
-.header {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: #1E2A38; /* azul escuro */
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
-
-.header_home {
-    margin-left: 3rem;
-}
-
-.header_menu a {
-    text-decoration: none;
-    margin-right: 3rem;
-    outline: none;
-    font-size: 1.3rem;
-    color: white;
-}
-
-.header_menu a:hover,
-.header_menu a:hover::after {
-    content: "";
-    color: #F9A826; /* destaque dourado */
-    border-bottom: 3px solid #F9A826;
-}
-
-.home {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    height: 100vh;
-    padding-top: 3rem;
-    background-color: #1E2A38; /* azul escuro */
-}
-
-.home_about {
-    margin-left: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF; /* texto branco */
-}
-
-.home_about h1 {
-    font-size: 3rem;
-}
-
-.home_about p {
-    font-size: 1.5rem;
-}
-
-.home_image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home_image img {
-    width: 80%;
-}
-
-.projetos {
-    height: 100%;
-    background-color: #1E2A38; /* azul escuro */
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.projetos_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 1rem;
-    padding: 0 3rem;
-    text-align: center;
-}
-
-.projetos_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.projetos_title h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+body {
+    background-color: #0A1D37;
     color: #FFFFFF;
 }
 
-.projeto {
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 60px;
+    background-color: #0A1D37;
+    position: fixed;
     width: 100%;
-    background-color: #3A506B; /* azul médio */
-    height: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+}
+
+.header_home {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #FFB400;
+}
+
+.header_menu a {
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.header_menu a:hover {
+    color: #FFB400;
+    border-bottom: 2px solid #FFB400;
+}
+
+/* SEÇÕES */
+section {
+    min-height: 100vh;
+    padding: 100px 2rem 50px 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* HOME */
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FFB400;
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    max-width: 600px;
+}
+
+/* SOBRE */
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #FFB400;
+}
+
+#sobre p {
+    max-width: 700px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* HABILIDADES */
+#habilidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFB400;
+}
+
+.habilidade {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+.habilidade span {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.habilidade-barra {
+    background-color: #3A506B;
     border-radius: 1rem;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    transition: transform 0.3s;
+    overflow: hidden;
 }
 
-.projeto:hover {
-    transform: scale(1.01);
-    border-bottom: 3px solid #F9A826; /* destaque ao passar o mouse */
+.habilidade-barra-fill {
+    height: 20px;
+    width: 0%;
+    background-color: #FFB400;
+    border-radius: 1rem;
+    transition: width 1.5s ease-in-out;
 }
 
-.projeto img {
+/* PROJETOS */
+#projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFB400;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     width: 100%;
-    height: 80%;
+    max-width: 1200px;
+}
+
+.projeto-card {
+    background-color: #3A506B;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+.projeto-card img {
+    width: 100%;
+}
+
+.projeto-card h3 {
     padding: 1rem;
-    border-radius: 2rem;
+    color: #FFB400;
+}
+
+.projeto-card p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* REFERÊNCIAS */
+#referencias h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFB400;
 }
 
 .referencias {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .referencias a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    background-color: #3A506B; /* azul médio */
-    color: white;
-    padding: 0.4rem;
-    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3A506B;
+    border-radius: 0.5rem;
     transition: transform 0.3s, background-color 0.3s;
 }
 
 .referencias a:hover {
     transform: scale(1.1);
-    background-color: #F9A826; /* destaque dourado */
-    color: #1E2A38; /* texto escuro */
+    background-color: #FFB400;
+    color: #0A1D37;
 }
 
-@media screen and (max-width: 600px) {
-    .home_about {
-        margin-left: 0;
-    }
-
-    .projeto {
-        width: 70%;
-    }
+/* CONTATO */
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFB400;
 }
 
+.contato form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contato input, .contato textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.contato button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #FFB400;
+    color: #0A1D37;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.contato button:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+    #home h1 { font-size: 2.5rem; }
+    #sobre h2, #habilidades h2, #projetos h2, #referencias h2, #contato h2 { font-size: 2rem; }
+}

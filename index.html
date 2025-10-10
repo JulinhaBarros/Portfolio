@@ -8,17 +8,19 @@
 </head>
 
 <body>
+  <!-- Botão de idioma global -->
   <header>
-    <h1>Portfólio de Projetos</h1>
-    <p>Projetos desenvolvidos em HTML, CSS, JavaScript e Power BI</p>
+    <h1 class="pt">Portfólio de Projetos</h1>
+    <h1 class="en" style="display:none;">Project Portfolio</h1>
+    <p class="pt">Projetos desenvolvidos em HTML, CSS, JavaScript e Power BI</p>
+    <p class="en" style="display:none;">Projects developed in HTML, CSS, JavaScript, and Power BI</p>
+    <button id="toggle-lang" class="btn-lang">EN</button>
   </header>
 
   <!-- Seção Sobre -->
   <section class="sobre">
-    <div class="sobre-header">
-      <h2>Sobre Mim</h2>
-      <button id="toggle-lang" class="btn-lang">EN</button>
-    </div>
+    <h2 class="pt">Sobre Mim</h2>
+    <h2 class="en" style="display:none;">About Me</h2>
 
     <p class="sobre-pt">
       💻 Estudante de Ciência da Computação na Universidade Cruzeiro do Sul, apaixonada por Análise de Dados, Cibersegurança, SAP e Desenvolvimento de Sistemas.<br>
@@ -47,92 +49,80 @@
     </p>
   </section>
 
+  <!-- Seção Projetos -->
   <section class="projetos">
-    <h2>Meus Projetos</h2>
+    <h2 class="pt">Meus Projetos</h2>
+    <h2 class="en" style="display:none;">My Projects</h2>
 
     <div class="projetos-grid">
 
       <div class="projeto-card">
         <img src="images/jogo-da-memoria.png" alt="Jogo da Memória">
-        <h3>Jogo da Memória</h3>
-        <p>Um jogo interativo feito com HTML, CSS e JavaScript para testar sua concentração e memória.</p>
+        <h3 class="pt">Jogo da Memória</h3>
+        <h3 class="en" style="display:none;">Memory Game</h3>
+        <p class="pt">Um jogo interativo feito com HTML, CSS e JavaScript para testar sua concentração e memória.</p>
+        <p class="en" style="display:none;">An interactive game built with HTML, CSS and JavaScript to test your concentration and memory.</p>
         <div class="botoes">
-          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
-          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+          <a href="https://julinhabarros.github.io/Projeto-Jogo-da-Memoria-/" class="btn demo" target="_blank">
+            <span class="pt">Ver Projeto</span>
+            <span class="en" style="display:none;">View Project</span>
+          </a>
+          <a href="#" class="btn github" target="_blank">GitHub</a>
         </div>
       </div>
 
+      <!-- Repetir estrutura para os demais projetos -->
       <div class="projeto-card">
         <img src="images/estacionamento.png" alt="Controle de Estacionamento">
-        <h3>Controle de Estacionamento</h3>
-        <p>Sistema simples para registrar veículos estacionados, com campos de modelo, placa e horário de entrada.</p>
+        <h3 class="pt">Controle de Estacionamento</h3>
+        <h3 class="en" style="display:none;">Parking Control</h3>
+        <p class="pt">Sistema simples para registrar veículos estacionados, com campos de modelo, placa e horário de entrada.</p>
+        <p class="en" style="display:none;">Simple system to register parked vehicles, including model, plate, and entry time.</p>
         <div class="botoes">
-          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
-          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+          <a href="https://julinhabarros.github.io/Projeto-Estacionamento/" class="btn demo" target="_blank">
+            <span class="pt">Ver Projeto</span>
+            <span class="en" style="display:none;">View Project</span>
+          </a>
+          <a href="#" class="btn github" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="projeto-card">
         <img src="images/cep.png" alt="Consulta de Endereço">
-        <h3>Consulta de Endereço</h3>
-        <p>Aplicação que consulta automaticamente o endereço a partir do CEP informado pelo usuário.</p>
+        <h3 class="pt">Consulta de Endereço</h3>
+        <h3 class="en" style="display:none;">Address Lookup</h3>
+        <p class="pt">Aplicação que consulta automaticamente o endereço a partir do CEP informado pelo usuário.</p>
+        <p class="en" style="display:none;">Application that automatically fetches address based on the user's postal code.</p>
         <div class="botoes">
-          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
-          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+          <a href="https://julinhabarros.github.io/Projeto-CEP/" class="btn demo" target="_blank">
+            <span class="pt">Ver Projeto</span>
+            <span class="en" style="display:none;">View Project</span>
+          </a>
+          <a href="#" class="btn github" target="_blank">GitHub</a>
         </div>
       </div>
 
-      <div class="projeto-card">
-        <img src="images/lista-de-alunos.png" alt="Lista de Alunos">
-        <h3>Lista de Alunos</h3>
-        <p>Interface para exibir alunos com informações de notas, médias e status de aprovação.</p>
-        <div class="botoes">
-          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
-          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <img src="images/tabuada.png" alt="Cálculo de Tabuada">
-        <h3>Cálculo de Tabuada</h3>
-        <p>Ferramenta que calcula e exibe automaticamente a tabuada de qualquer número escolhido.</p>
-        <div class="botoes">
-          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
-          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <img src="images/dashboard_bebidas_vivas.png.png" alt="Dashboard Power BI - Bebidas Vivas S.A.">
-        <h3>Dashboard Power BI – Bebidas Vivas S.A.</h3>
-        <p>Dashboard interativo em Power BI para análise de performance logística, fretes e SLA de entregas.</p>
-        <div class="botoes">
-          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
-          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
-        </div>
-      </div>
+      <!-- Projetos restantes podem seguir o mesmo padrão -->
 
     </div>
   </section>
 
   <footer>
-    <p>© 2025 | Desenvolvido por Julia Barros</p>
+    <p class="pt">© 2025 | Desenvolvido por Julia Barros</p>
+    <p class="en" style="display:none;">© 2025 | Developed by Julia Barros</p>
   </footer>
 
-  <!-- Script para alternar idiomas -->
+  <!-- Script para alternar idioma global -->
   <script>
     const toggleBtn = document.getElementById('toggle-lang');
-    const ptTexts = document.querySelectorAll('.sobre-pt');
-    const enTexts = document.querySelectorAll('.sobre-en');
     let isPT = true;
 
     toggleBtn.addEventListener('click', () => {
-      ptTexts.forEach(p => p.style.display = isPT ? 'none' : 'block');
-      enTexts.forEach(p => p.style.display = isPT ? 'block' : 'none');
+      document.querySelectorAll('.pt').forEach(el => el.style.display = isPT ? 'none' : 'block');
+      document.querySelectorAll('.en').forEach(el => el.style.display = isPT ? 'block' : 'none');
       toggleBtn.textContent = isPT ? 'PT' : 'EN';
       isPT = !isPT;
     });
   </script>
 </body>
 </html>
-

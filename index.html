@@ -107,7 +107,7 @@
           <div class="projeto-img-wrapper">
             <img src="${imageUrl}" alt="${repo.name} cover">
           </div>
-          <h3>${repo.name}</h3>
+          <h3>${repo.name.replace(/-/g, ' ')}</h3>
           <a href="${repo.html_url}" target="_blank" class="projeto-link">Ver no GitHub ↗</a>
         `;
         container.appendChild(card);

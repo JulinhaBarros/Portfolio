@@ -6,76 +6,78 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f3f7; /* fundo suave */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f7; /* neutro elegante */
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Cabeçalho */
 header {
-  background: linear-gradient(135deg, #1b1b2f, #3a3a5c); /* azul escuro sofisticado */
-  color: #f8f8f8;
-  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e1e2f, #3c3c5c); /* azul escuro sofisticado */
+  color: #fdf6e3;
+  padding: 60px 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
   margin-bottom: 10px;
-  color: #fdf6e3; /* off-white elegante */
+  color: #fdf6e3;
 }
 
 header p {
   font-size: 1.2rem;
+  color: #dcdcdc;
   margin-bottom: 20px;
-  color: #dcdcdc; /* cinza claro */
 }
 
 /* Botão de idioma */
 #toggle-lang {
   margin: 20px auto 0 auto;
   display: block;
-  padding: 10px 18px;
+  padding: 10px 22px;
   border: none;
-  border-radius: 8px;
-  background-color: #fdd835; /* dourado suave */
-  color: #1b1b2f; /* azul escuro */
-  font-weight: 600;
+  border-radius: 10px;
+  background-color: #fdd835; /* dourado elegante */
+  color: #1e1e2f; 
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 #toggle-lang:hover {
-  background-color: #fbc02d; /* dourado intenso */
+  background-color: #fbc02d;
   transform: scale(1.05);
 }
 
 /* Seção Sobre */
 .sobre {
   max-width: 900px;
-  margin: 50px auto;
-  padding: 30px 25px;
+  margin: 60px auto;
+  padding: 35px 30px;
   background-color: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
 }
 
 .sobre h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 2rem;
-  color: #1b1b2f;
+  font-family: 'Merriweather', serif;
+  color: #1e1e2f;
 }
 
 .sobre p {
   text-align: justify;
   font-size: 1rem;
-  line-height: 1.7;
-  color: #555555;
-  margin-bottom: 15px;
+  color: #555;
+  margin-bottom: 18px;
+  line-height: 1.8;
 }
 
 /* Projetos */
@@ -87,71 +89,77 @@ header p {
 
 .projetos h2 {
   text-align: center;
-  margin-bottom: 40px;
-  color: #1b1b2f;
+  margin-bottom: 45px;
+  font-family: 'Merriweather', serif;
+  color: #1e1e2f;
 }
 
+/* Grid de projetos */
 .projetos-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 30px;
   justify-content: center;
 }
 
+/* Cartão de projeto */
 .projeto-card {
   background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
   flex: 1 1 300px;
-  max-width: 300px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projeto-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .projeto-card img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
   height: 180px;
   object-fit: cover;
-  border: 2px solid #fdd835; /* detalhe elegante */
+  border-radius: 14px;
+  margin-bottom: 15px;
+  border: 2px solid #fdd835;
 }
 
 .projeto-card h3 {
-  color: #1b1b2f; /* azul escuro sofisticado */
-  margin-bottom: 10px;
   text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #1e1e2f;
+  margin-bottom: 12px;
   font-size: 1.3rem;
 }
 
 .projeto-card p {
-  margin-bottom: 15px;
   text-align: justify;
-  color: #444444;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.7;
 }
 
-/* Botões de projeto */
+/* Botões */
 .botoes {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  margin-top: auto;
 }
 
 .btn {
-  padding: 10px 16px;
+  padding: 10px 18px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn.demo {
@@ -164,7 +172,7 @@ header p {
 }
 
 .btn.github {
-  background-color: #24292e;
+  background-color: #24292e; 
   color: #fff;
 }
 
@@ -174,10 +182,11 @@ header p {
 
 /* Rodapé */
 footer {
-  background-color: #1b1b2f; /* azul escuro */
-  color: #fdf6e3; /* off-white */
+  background-color: #1e1e2f;
+  color: #fdf6e3;
   text-align: center;
-  padding: 20px;
+  padding: 25px 20px;
   font-size: 0.95rem;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+  font-family: 'Merriweather', serif;
 }

@@ -87,7 +87,6 @@ header p {
   font-size: 2.2rem;
   color: #1a1a1a;
   margin-bottom: 40px;
-  text-align: center; /* títulos centralizados */
 }
 
 .projetos-grid {
@@ -139,7 +138,6 @@ header p {
 /* Botões do card */
 .botoes {
   display: flex;
-  justify-content: center; /* centraliza os botões */
   gap: 10px;
   margin-top: auto;
 }

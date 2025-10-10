@@ -125,7 +125,7 @@ header p {
   font-size: 1.4rem;
   color: #007bff;
   margin-bottom: 10px;
-  text-align: left; /* títulos alinhados à esquerda */
+  text-align: center; /* títulos alinhados no centro */
 }
 
 .projeto-card p {

@@ -1,44 +1,165 @@
-/* Seção Sobre */
-.sobre {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 25px 20px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.sobre-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
   margin-bottom: 20px;
 }
 
-.sobre h2 {
-  font-size: 2rem;
-  color: #333;
-}
-
-.sobre p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-/* Botão de idioma */
 .btn-lang {
-  padding: 5px 12px;
-  border: none;
-  border-radius: 8px;
+  padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-lang:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Seção Sobre */
+.sobre {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sobre h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* Seção Projetos */
+.projetos {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 30px;
+}
+
+.projetos h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.projeto-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+.projeto-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.projeto-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn.demo {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn.demo:hover {
+  background-color: #218838;
+}
+
+.btn.github {
+  background-color: #24292e;
+  color: #fff;
+}
+
+.btn.github:hover {
+  background-color: #1b1f23;
+}
+
+/* Rodapé */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  color: #777;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
 }

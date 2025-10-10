@@ -7,23 +7,31 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f6f8;
+  background-color: #f2f3f7; /* fundo suave */
   color: #333;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
+  background: linear-gradient(135deg, #1b1b2f, #3a3a5c); /* azul escuro sofisticado */
+  color: #f8f8f8;
   padding: 50px 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
-header h1, header p {
-  margin-bottom: 15px;
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #fdf6e3; /* off-white elegante */
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #dcdcdc; /* cinza claro */
 }
 
 /* Botão de idioma */
@@ -33,15 +41,15 @@ header h1, header p {
   padding: 10px 18px;
   border: none;
   border-radius: 8px;
-  background-color: #fff;
-  color: #007bff;
+  background-color: #fdd835; /* dourado suave */
+  color: #1b1b2f; /* azul escuro */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 #toggle-lang:hover {
-  background-color: #e0e0e0;
+  background-color: #fbc02d; /* dourado intenso */
   transform: scale(1.05);
 }
 
@@ -49,24 +57,24 @@ header h1, header p {
 .sobre {
   max-width: 900px;
   margin: 50px auto;
-  padding: 25px 20px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .sobre h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #333;
+  color: #1b1b2f;
 }
 
 .sobre p {
   text-align: justify;
   font-size: 1rem;
   line-height: 1.7;
-  color: #555;
+  color: #555555;
   margin-bottom: 15px;
 }
 
@@ -80,6 +88,7 @@ header h1, header p {
 .projetos h2 {
   text-align: center;
   margin-bottom: 40px;
+  color: #1b1b2f;
 }
 
 .projetos-grid {
@@ -92,12 +101,18 @@ header h1, header p {
 .projeto-card {
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
   flex: 1 1 300px;
   max-width: 300px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .projeto-card img {
@@ -106,19 +121,23 @@ header h1, header p {
   margin-bottom: 15px;
   height: 180px;
   object-fit: cover;
+  border: 2px solid #fdd835; /* detalhe elegante */
 }
 
 .projeto-card h3 {
-  color: #007bff;
+  color: #1b1b2f; /* azul escuro sofisticado */
   margin-bottom: 10px;
   text-align: center;
+  font-size: 1.3rem;
 }
 
 .projeto-card p {
   margin-bottom: 15px;
   text-align: justify;
+  color: #444444;
 }
 
+/* Botões de projeto */
 .botoes {
   display: flex;
   justify-content: center;
@@ -136,12 +155,12 @@ header h1, header p {
 }
 
 .btn.demo {
-  background-color: #28a745;
+  background-color: #4caf50; /* verde elegante */
   color: #fff;
 }
 
 .btn.demo:hover {
-  background-color: #218838;
+  background-color: #43a047;
 }
 
 .btn.github {
@@ -155,10 +174,10 @@ header h1, header p {
 
 /* Rodapé */
 footer {
-  background-color: #ffffff;
+  background-color: #1b1b2f; /* azul escuro */
+  color: #fdf6e3; /* off-white */
   text-align: center;
   padding: 20px;
   font-size: 0.95rem;
-  color: #777;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
 }

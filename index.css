@@ -1,205 +1,155 @@
-/* === VARIÁVEIS GERAIS === */
-:root {
-  --bg-color: #f8f9fc;
-  --text-color: #222;
-  --accent-color: #6c63ff;
-  --accent-light: #8c86ff;
-  --muted-color: #666;
-  --card-bg: #fff;
-  --border-radius: 1rem;
-  --shadow: 0 4px 12px rgba(0,0,0,0.1);
-  --transition: all 0.3s ease;
-  --font-family: 'Poppins', sans-serif;
-}
-
-/* === RESETA TUDO === */
-* {
+/* ============================
+   ESTILO GERAL
+============================ */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fa;
+  color: #222;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  line-height: 1.6;
-}
-
-/* === CABEÇALHO === */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--card-bg);
-  box-shadow: var(--shadow);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header_menu a {
-  text-decoration: none;
-  color: var(--text-color);
-  margin: 0 0.8rem;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.header_menu a:hover {
-  color: var(--accent-color);
-}
-
-#lang-toggle {
-  background: var(--accent-color);
+/* ============================
+   CABEÇALHO
+============================ */
+header {
+  background-image: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
   color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-#lang-toggle:hover {
-  background: var(--accent-light);
-}
-
-/* === SEÇÕES === */
-section {
-  padding: 4rem 2rem;
   text-align: center;
-  max-width: 1200px;
-  margin: auto;
+  padding: 50px 20px;
 }
 
-/* === TÍTULOS === */
-h1, h2, h3 {
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1.3;
-  text-align: center;
-  word-break: break-word;
-  text-transform: capitalize;
 }
 
-h1 {
-  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-  color: var(--accent-color);
-  margin-bottom: 1rem;
+header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-h2 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  margin-bottom: 2rem;
-  position: relative;
-  display: inline-block;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 3px;
-  background: var(--accent-color);
-  border-radius: 2px;
-}
-
-/* === PROJETOS === */
+/* ============================
+   SEÇÃO DE PROJETOS
+============================ */
 .projetos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.projetos h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #182848;
+  margin-bottom: 40px;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* ============================
+   CARDS
+============================ */
 .projeto-card {
-  background: var(--card-bg);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  background: white;
+  border-radius: 20px;
   overflow: hidden;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  max-width: 340px;
 }
 
 .projeto-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.projeto-img-wrapper {
+.projeto-card img {
   width: 100%;
-  height: 180px;
-  overflow: hidden;
-}
-
-.projeto-img-wrapper img {
-  width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
-  transition: var(--transition);
-}
-
-.projeto-card:hover img {
-  transform: scale(1.05);
 }
 
 .projeto-card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.1rem;
-  color: var(--text-color);
+  color: #182848;
+  margin-top: 15px;
+  font-size: 1.2rem;
 }
 
-.projeto-link {
-  color: var(--accent-color);
-  font-weight: 500;
+.projeto-card p {
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+  color: #555;
+  min-height: 70px;
+}
+
+/* ============================
+   BOTÕES
+============================ */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
   text-decoration: none;
-  transition: var(--transition);
-}
-
-.projeto-link:hover {
-  text-decoration: underline;
-}
-
-/* === CONTATO === */
-.contato a {
-  margin: 0 0.8rem;
-  text-decoration: none;
-  color: var(--accent-color);
+  padding: 10px 18px;
+  border-radius: 25px;
   font-weight: 500;
-  transition: var(--transition);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
-.contato a:hover {
-  color: var(--accent-light);
+.btn.demo {
+  background: #4b6cb7;
+  color: white;
 }
 
-/* === RODAPÉ === */
+.btn.demo:hover {
+  background: #2a3a7b;
+}
+
+.btn.github {
+  background: #24292e;
+  color: white;
+}
+
+.btn.github:hover {
+  background: #000000;
+}
+
+/* ============================
+   RODAPÉ
+============================ */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 25px;
+  background-color: #182848;
+  color: white;
   font-size: 0.9rem;
-  color: var(--muted-color);
-  border-top: 1px solid #ddd;
+  margin-top: 40px;
 }
 
-/* === RESPONSIVO === */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 0.8rem;
+  header h1 {
+    font-size: 2rem;
   }
 
-  .header_menu {
-    text-align: center;
+  .projeto-card img {
+    height: 180px;
   }
 
-  .projeto-img-wrapper {
-    height: 150px;
+  .btn {
+    padding: 8px 14px;
   }
 }

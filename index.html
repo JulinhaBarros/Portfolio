@@ -14,15 +14,38 @@
   </header>
 
   <!-- Seção Sobre -->
-<section class="sobre">
-  <h2>Sobre Mim</h2>
-  <p>💻 Estudante de Ciência da Computação na Universidade Cruzeiro do Sul, apaixonada por Análise de Dados, Cibersegurança, SAP e Desenvolvimento de Sistemas.<br>
-  Combino conhecimento acadêmico com experiência prática para entregar soluções seguras, eficientes e inovadoras.</p>
-  
-  <p>📊 Com uma mentalidade voltada para a resolução de problemas e fortes habilidades analíticas, gosto de transformar dados em insights acionáveis, otimizar processos e aplicar boas práticas em cibersegurança para proteger informações críticas.</p>
-  
-  <p>🚀 Estou continuamente buscando oportunidades para aprender, crescer e contribuir em ambientes colaborativos, valorizando trabalho em equipe, adaptabilidade e melhoria contínua como motores essenciais para o sucesso.</p>
-</section>
+  <section class="sobre">
+    <div class="sobre-header">
+      <h2>Sobre Mim</h2>
+      <button id="toggle-lang" class="btn-lang">EN</button>
+    </div>
+
+    <p class="sobre-pt">
+      💻 Estudante de Ciência da Computação na Universidade Cruzeiro do Sul, apaixonada por Análise de Dados, Cibersegurança, SAP e Desenvolvimento de Sistemas.<br>
+      Combino conhecimento acadêmico com experiência prática para entregar soluções seguras, eficientes e inovadoras.
+    </p>
+    
+    <p class="sobre-pt">
+      📊 Com uma mentalidade voltada para a resolução de problemas e fortes habilidades analíticas, gosto de transformar dados em insights acionáveis, otimizar processos e aplicar boas práticas em cibersegurança para proteger informações críticas.
+    </p>
+    
+    <p class="sobre-pt">
+      🚀 Estou continuamente buscando oportunidades para aprender, crescer e contribuir em ambientes colaborativos, valorizando trabalho em equipe, adaptabilidade e melhoria contínua como motores essenciais para o sucesso.
+    </p>
+
+    <p class="sobre-en" style="display:none;">
+      💻 Computer Science student at Cruzeiro do Sul University, passionate about Data Analysis, Cybersecurity, SAP, and Systems Development.<br>
+      I combine academic knowledge with hands-on experience to deliver secure, efficient, and innovative solutions.
+    </p>
+    
+    <p class="sobre-en" style="display:none;">
+      📊 With a problem-solving mindset and strong analytical skills, I enjoy transforming data into actionable insights, optimizing processes, and applying best practices in cybersecurity to protect critical information.
+    </p>
+    
+    <p class="sobre-en" style="display:none;">
+      🚀 I am continuously seeking opportunities to learn, grow, and contribute in collaborative environments, valuing teamwork, adaptability, and continuous improvement as essential drivers for success.
+    </p>
+  </section>
 
   <section class="projetos">
     <h2>Meus Projetos</h2>
@@ -95,6 +118,21 @@
   <footer>
     <p>© 2025 | Desenvolvido por Julia Barros</p>
   </footer>
+
+  <!-- Script para alternar idiomas -->
+  <script>
+    const toggleBtn = document.getElementById('toggle-lang');
+    const ptTexts = document.querySelectorAll('.sobre-pt');
+    const enTexts = document.querySelectorAll('.sobre-en');
+    let isPT = true;
+
+    toggleBtn.addEventListener('click', () => {
+      ptTexts.forEach(p => p.style.display = isPT ? 'none' : 'block');
+      enTexts.forEach(p => p.style.display = isPT ? 'block' : 'none');
+      toggleBtn.textContent = isPT ? 'PT' : 'EN';
+      isPT = !isPT;
+    });
+  </script>
 </body>
 </html>
 

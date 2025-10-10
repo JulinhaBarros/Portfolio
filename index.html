@@ -1,128 +1,88 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Julia Barros</title>
-
-  <!-- Referência ao seu CSS externo -->
+  <title>Portfólio de Projetos - Julia Barros</title>
   <link rel="stylesheet" href="index.css">
-
-  <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <header class="header">
-    <div id="site-title">Julia Barros</div>
-    <nav class="header_menu">
-      <a href="#home" data-pt="Home" data-en="Home">Home</a>
-      <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
-      <a href="#habilidades" data-pt="Habilidades" data-en="Skills">Habilidades</a>
-      <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
-      <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
-    </nav>
-    <button id="lang-toggle">EN 🇬🇧</button>
+  <header>
+    <h1>Portfólio de Projetos</h1>
+    <p>Projetos desenvolvidos em HTML, CSS, JavaScript e Power BI</p>
   </header>
 
-  <!-- HOME -->
-  <section id="home">
-    <h1 data-pt="Olá, eu sou Julia Silva Barros" data-en="Hi, I'm Julia Silva Barros"></h1>
-    <p data-pt="Desenvolvedora Front-End e Analista de Dados. Transformo ideias em projetos digitais modernos e funcionais."
-       data-en="Front-End Developer and Data Analyst. I transform ideas into modern and functional digital projects."></p>
-  </section>
+  <section class="projetos">
+    <h2>Meus Projetos</h2>
 
-  <!-- SOBRE -->
-  <section id="sobre">
-    <h2 data-pt="Sobre Mim" data-en="About Me"></h2>
-    <p data-pt="💻 Estudante de Ciência da Computação na Universidade Cruzeiro do Sul, apaixonada por Análise de Dados, Cibersegurança, SAP e Desenvolvimento de Sistemas."
-       data-en="💻 Computer Science student at Cruzeiro do Sul University, passionate about Data Analysis, Cybersecurity, SAP, and Systems Development."></p>
-    <p data-pt="Combino conhecimento acadêmico com experiência prática para entregar soluções seguras, eficientes e inovadoras."
-       data-en="I combine academic knowledge with hands-on experience to deliver secure, efficient, and innovative solutions."></p>
-    <p data-pt="📊 Com mentalidade analítica e foco em resolução de problemas, gosto de transformar dados em insights acionáveis, otimizar processos e aplicar boas práticas de cibersegurança para proteger informações críticas."
-       data-en="📊 With a problem-solving mindset and strong analytical skills, I enjoy transforming data into actionable insights, optimizing processes, and applying best practices in cybersecurity to protect critical information."></p>
-    <p data-pt="🚀 Busco constantemente oportunidades para aprender, crescer e contribuir em ambientes colaborativos, valorizando o trabalho em equipe, a adaptabilidade e a melhoria contínua como pilares essenciais para o sucesso."
-       data-en="🚀 I am continuously seeking opportunities to learn, grow, and contribute in collaborative environments, valuing teamwork, adaptability, and continuous improvement as essential drivers for success."></p>
-  </section>
+    <div class="projetos-grid">
 
-  <!-- PROJETOS -->
-  <section id="projetos">
-    <h2 data-pt="Projetos" data-en="Projects"></h2>
-    <div id="lista-projetos" class="projetos"></div>
-  </section>
+      <div class="projeto-card">
+        <img src="img/jogo_memoria.png" alt="Jogo da Memória">
+        <h3>Jogo da Memória</h3>
+        <p>Um jogo interativo feito com HTML, CSS e JavaScript para testar sua concentração e memória.</p>
+        <div class="botoes">
+          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
+          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
 
-  <!-- CONTATO -->
-  <section id="contato">
-    <h2 data-pt="Contato" data-en="Contact"></h2>
-    <div class="contato">
-      <a href="https://www.linkedin.com/in/julia-barros-73293b247/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/JulinhaBarros" target="_blank">GitHub</a>
-      <a href="mailto:barros.flaviojulia@gmail.com">Email</a>
+      <div class="projeto-card">
+        <img src="img/estacionamento.png" alt="Controle de Estacionamento">
+        <h3>Controle de Estacionamento</h3>
+        <p>Sistema simples para registrar veículos estacionados, com campos de modelo, placa e horário de entrada.</p>
+        <div class="botoes">
+          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
+          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <img src="img/consulta_endereco.png" alt="Consulta de Endereço">
+        <h3>Consulta de Endereço</h3>
+        <p>Aplicação que consulta automaticamente o endereço a partir do CEP informado pelo usuário.</p>
+        <div class="botoes">
+          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
+          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <img src="img/lista_alunos.png" alt="Lista de Alunos">
+        <h3>Lista de Alunos</h3>
+        <p>Interface para exibir alunos com informações de notas, médias e status de aprovação.</p>
+        <div class="botoes">
+          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
+          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <img src="img/tabuada.png" alt="Cálculo de Tabuada">
+        <h3>Cálculo de Tabuada</h3>
+        <p>Ferramenta que calcula e exibe automaticamente a tabuada de qualquer número escolhido.</p>
+        <div class="botoes">
+          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
+          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <img src="img/dashboard_bebidas_vivas.png" alt="Dashboard Power BI - Bebidas Vivas S.A.">
+        <h3>Dashboard Power BI – Bebidas Vivas S.A.</h3>
+        <p>Dashboard interativo em Power BI para análise de performance logística, fretes e SLA de entregas.</p>
+        <div class="botoes">
+          <a href="#" class="btn demo" target="_blank">Ver Projeto</a>
+          <a href="#" class="btn github" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Julia Barros — Todos os direitos reservados.</p>
+    <p>© 2025 | Desenvolvido por Julia Barros</p>
   </footer>
-
-  <!-- =================== SCRIPT =================== -->
-  <script>
-    async function carregarRepositoriosComImagens() {
-      const response = await fetch("https://api.github.com/users/JulinhaBarros/repos");
-      const repos = await response.json();
-      const container = document.getElementById("lista-projetos");
-      container.innerHTML = "";
-
-      const fallbackImage = "https://via.placeholder.com/400x200?text=Projeto";
-
-      // Filtrar apenas os repositórios que começam com "Projeto" ou são "Case-BI"
-      const reposFiltrados = repos
-        .filter(repo => repo.name.startsWith("Projeto") || repo.name === "Case-BI")
-        .sort((a, b) => a.name.localeCompare(b.name)); // ordenar alfabeticamente
-
-      for (const repo of reposFiltrados) {
-        const card = document.createElement("div");
-        card.classList.add("projeto-card");
-
-        // Tentar encontrar cover.png
-        let imageUrl = fallbackImage;
-        try {
-          const coverResp = await fetch(`https://raw.githubusercontent.com/JulinhaBarros/${repo.name}/main/cover.png`);
-          if (coverResp.ok) {
-            imageUrl = coverResp.url;
-          } else {
-            const coverResp2 = await fetch(`https://raw.githubusercontent.com/JulinhaBarros/${repo.name}/main/assets/cover.png`);
-            if (coverResp2.ok) imageUrl = coverResp2.url;
-          }
-        } catch {
-          console.warn("Sem imagem para:", repo.name);
-        }
-
-        card.innerHTML = `
-          <div class="projeto-img-wrapper">
-            <img src="${imageUrl}" alt="${repo.name} cover">
-          </div>
-          <h3>${repo.name.replace(/-/g, ' ')}</h3>
-          <a href="${repo.html_url}" target="_blank" class="projeto-link">Ver no GitHub ↗</a>
-        `;
-        container.appendChild(card);
-      }
-    }
-
-    carregarRepositoriosComImagens();
-
-    // Alternância de idioma
-    const langButton = document.getElementById("lang-toggle");
-    let currentLang = "pt";
-    langButton.addEventListener("click", () => {
-      currentLang = currentLang === "pt" ? "en" : "pt";
-      langButton.textContent = currentLang === "pt" ? "EN 🇬🇧" : "PT 🇧🇷";
-      document.querySelectorAll("[data-pt]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
-      });
-    });
-  </script>
-
 </body>
 </html>

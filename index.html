@@ -48,7 +48,7 @@
     <div id="lista-projetos" class="projetos"></div>
   </section>
 
-  <!-- Contato -->
+  <!-- CONTATO -->
   <section id="contato">
     <h2 data-pt="Contato" data-en="Contact"></h2>
     <div class="contato">
@@ -62,8 +62,8 @@
     <p>© 2025 Julia Barros — Todos os direitos reservados.</p>
   </footer>
 
+  <!-- =================== SCRIPT =================== -->
   <script>
-    // === Carregar projetos com imagens ===
     async function carregarRepositoriosComImagens() {
       const response = await fetch("https://api.github.com/users/JulinhaBarros/repos");
       const repos = await response.json();
@@ -72,11 +72,16 @@
 
       const fallbackImage = "https://via.placeholder.com/400x200?text=Projeto";
 
-      for (const repo of repos) {
+      // Filtrar apenas os repositórios que começam com "Projeto" ou são "Case-BI"
+      const reposFiltrados = repos
+        .filter(repo => repo.name.startsWith("Projeto") || repo.name === "Case-BI")
+        .sort((a, b) => a.name.localeCompare(b.name)); // ordenar alfabeticamente
+
+      for (const repo of reposFiltrados) {
         const card = document.createElement("div");
         card.classList.add("projeto-card");
 
-        // tentar obter cover.png ou assets/cover.png
+        // Tentar encontrar cover.png
         let imageUrl = fallbackImage;
         try {
           const coverResp = await fetch(`https://raw.githubusercontent.com/JulinhaBarros/${repo.name}/main/cover.png`);
@@ -103,7 +108,7 @@
 
     carregarRepositoriosComImagens();
 
-    // === Alternância de idioma ===
+    // Alternância de idioma
     const langButton = document.getElementById("lang-toggle");
     let currentLang = "pt";
     langButton.addEventListener("click", () => {
